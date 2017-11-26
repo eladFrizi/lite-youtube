@@ -1,18 +1,18 @@
 'use-strict'
-const API_KEY = 'AIzaSyDffDzg6TlfpOXNhc3lmjXHtLiNsoA7PRM'
+const YT_KEY = 'AIzaSyDffDzg6TlfpOXNhc3lmjXHtLiNsoA7PRM'
 
 
 
-async function initApp() {
-    console.log('in the  run')
-    var videos = await searchVideos('surf')
-    renderVideos(videos)
-    changePlayedVideo(videos[0].id.videoId)
-}
+// async function initApp() {
+//     console.log('in the  run')
+//     var videos = await searchVideos('surf')
+//     renderVideos(videos)
+//     changePlayedVideo(videos[0].id.videoId)
+// }
 
 
 async function searchVideos(value) {
-    var url = `https://www.googleapis.com/youtube/v3/search?part=snippet&videoEmbeddable=true&type=video&key=${API_KEY}&q=${value}`;
+    var url = `https://www.googleapis.com/youtube/v3/search?part=snippet&videoEmbeddable=true&type=video&key=${YT_KEY}&q=${value}`;
     var videos = await fetchVideos(url);
     console.log(videos, 'asd')
     return videos
@@ -41,12 +41,12 @@ function renderVideos(videos) {
 }
 
 
-async function searchPressed() {
-    event.preventDefault()
-    searchValue = event.target.querySelector('input').value
-    var videos = await searchVideos(searchValue) 
-    renderVideos(videos) 
-}
+// async function searchPressed() {
+//     event.preventDefault()
+//     searchValue = event.target.querySelector('input').value
+//     var videos = await searchVideos(searchValue) 
+//     renderVideos(videos) 
+// }
 
 function changePlayedVideo(videoId) {
     var elVideoContianer = document.querySelector('.video-container')
