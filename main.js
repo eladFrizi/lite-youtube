@@ -43,7 +43,8 @@ function renderVideos(videos) {
 
 async function searchPressed() {
     event.preventDefault()
-    var videos = await searchVideos(event.target.value) 
+    searchValue = event.target.querySelector('input').value
+    var videos = await searchVideos(searchValue) 
     renderVideos(videos) 
 }
 
