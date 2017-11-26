@@ -4,7 +4,7 @@ async function searchPressed() {
     searchValue = event.target.querySelector('input').value
     var videos = await searchVideos(searchValue) 
     renderVideos(videos) 
-    renderWiki('thesearchValue')    
+    renderWiki(searchValue)    
 }
 
 
