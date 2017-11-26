@@ -1,0 +1,40 @@
+.video-preview{
+    background: #383A3F;
+    color: #F6B352;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;    
+    box-shadow: -9px 14px 25px 7px rgba(0, 0, 0, 0.12941176470588237);
+}
+.video-preview > h6{
+    margin-left: 5px;
+}
+body{
+    background: #F68657;
+}
+.hide{
+    display: none;
+}
+
+header {
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header.container {
+    padding-right: 0;
+    padding-left: 0;    
+}
+
+header > .input-group {
+    width: 50%;  
+}
+
+.video-container {
+    display: flex;
+    justify-content: flex-end;
+}
